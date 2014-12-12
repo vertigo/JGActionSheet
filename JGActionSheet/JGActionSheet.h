@@ -42,6 +42,9 @@ typedef NS_ENUM(NSUInteger, JGActionSheetArrowDirection) {
  A section for JGActionSheet.
  @sa JGActionSheet.
  */
+
+@class JGButton;
+
 @interface JGActionSheetSection : UIView
 
 /**
@@ -104,6 +107,8 @@ typedef NS_ENUM(NSUInteger, JGActionSheetArrowDirection) {
  @Warning If the section does not have any buttons or @c index exceeds the number of buttons an exception is thrown.
  */
 - (void)setButtonStyle:(JGActionSheetButtonStyle)buttonStyle forButtonAtIndex:(NSUInteger)index;
+
+- (JGButton *)makeButtonWithTitle:(NSString *)title style:(JGActionSheetButtonStyle)style;
 
 @end
 
